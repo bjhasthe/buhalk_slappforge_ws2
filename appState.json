@@ -30,7 +30,16 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "s3animalRecognitionBucket",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ]
       }
     },
     "deletedFiles": [],
@@ -39,7 +48,19 @@
       "5c5ac75f-dbe6-49f1-87a5-f88ac06d0962"
     ],
     "currentFileId": "5c5ac75f-dbe6-49f1-87a5-f88ac06d0962",
-    "resources": {},
+    "resources": {
+      "s3animalRecognitionBucket": {
+        "name": "s3animalRecognitionBucket",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-west-1",
+            "name": "animal-recognition-bucket"
+          }
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -65,7 +86,7 @@
     "projectRegion": "us-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1573110064262
+    "lastSave": 1573110106895
   },
   "VCS_STATE": {
     "provider": "GitHub",
