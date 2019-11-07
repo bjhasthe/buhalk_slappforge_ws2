@@ -39,7 +39,26 @@
               "keySuffix": ""
             }
           }
-        ]
+        ],
+        "customSecurityPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Resource": "*",
+              "Action": [
+                "rekognition:*"
+              ]
+            },
+            {
+              "Effect": "Allow",
+              "Resource": "animal-recognition-bucket/*",
+              "Action": [
+                "s3:GetObject"
+              ]
+            }
+          ]
+        }
       }
     },
     "deletedFiles": [],
@@ -76,7 +95,13 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "version": "2.566.0",
+          "language": "javascript"
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -86,7 +111,7 @@
     "projectRegion": "us-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1573111262198
+    "lastSave": 1573111475294
   },
   "VCS_STATE": {
     "provider": "GitHub",
