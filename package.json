@@ -1,8 +1,8 @@
 {
   "name": "buhalk_slappforge_ws2",
   "version": "1.0.0",
-  "dependencies": {
-    "aws-sdk": "2.566.0"
-  },
-  "devDependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "2.176.0"
+  }
 }
